@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-main.component.css']
 })
 export class ContactMainComponent {
+  toggleModal = false;
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(e: Event) {
+    e.preventDefault();
+    this.toggleModal = !this.toggleModal;
+  }
 }
